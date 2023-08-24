@@ -52,7 +52,7 @@ impl Complexf64x8 {
       .1
   }
 
-  fn sum(&self, other: Complexf32x8) -> Complexf64x8 {
+  fn sum(&self, other: Complexf64x8) -> Complexf64x8 {
     return Complexf64x8 {
       real: self.real + other.real,
       imag: self.imag + other.imag,
@@ -102,11 +102,11 @@ async fn main() {
     }
     if is_key_down(KeyCode::Q) {
       println!("small");
-      model.scale *= 1.01;
+      model.scale *= 1.015;
     }
     if is_key_down(KeyCode::E) {
       println!("big");
-      model.scale *= 0.99;
+      model.scale *= 0.985;
     }
     let scaler = f64x8::from_slice(&[0f64, 1f64, 2f64, 3f64, 4f64, 5f64, 6f64, 7f64])
       / f64x8::splat(model.scale)
