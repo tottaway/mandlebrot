@@ -102,11 +102,11 @@ async fn main() {
     }
     if is_key_down(KeyCode::Q) {
       println!("small");
-      model.scale *= 1.015;
+      model.scale *= 1.02;
     }
     if is_key_down(KeyCode::E) {
       println!("big");
-      model.scale *= 0.985;
+      model.scale *= 0.98;
     }
     let scaler = f64x8::from_slice(&[0f64, 1f64, 2f64, 3f64, 4f64, 5f64, 6f64, 7f64])
       / f64x8::splat(model.scale)
